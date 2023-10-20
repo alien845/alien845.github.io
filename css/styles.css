@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    border: #000000;
+}
+
+body {
+    background-color: rgba(88, 103, 139, 0.993);
+}
+
+/*CAPÇALERA DE LA PÀGINA*/
+header,
+footer,
+section {
+    width: 100%;
+    background-color: rgba(100, 136, 237, 0.993);
+    border: 1px solid rgba(100, 136, 237, 0.993);
+}
+
+header {
+    background-image: url("../imatges/vilafranca10.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+header h2 {
+    font-size: 2vw;
+    text-align: right;
+    padding-right: 1.5vw;
+}
+
+header h2 a {
+    color: rgba(255, 174, 0, 0.897);
+    text-shadow: 2px 2px #000000;
+}
+
+header h1 {
+    font-size: 7vw;
+    text-align: center;
+    color: rgba(255, 174, 0, 0.897);
+    text-shadow: 2px 2px #000000;
+}
+
+
+/*section {
+    display: flex;
+    flex-wrap: wrap;
+}*V*/
+
+
+/*MENU DE LA PÀGINA*/
+nav {
+    /* flex: 1;/*V*/
+    background-color: rgba(100, 182, 237, 0.993);
+    text-align: center;
+    padding: 1vw;
+}
+
+article {
+    flex: 4;
+    background-color: aquamarine;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: linear-gradient(rgb(0, 98, 128), rgb(221, 221, 86));
+}
+
+nav li {
+    width: 100%;
+}
+
+nav li a {
+    display: block;
+    color: #000000;
+    /*padding: 5%;/*V**/
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 5%;
+}
+
+nav li a.active {
+    background-color: #044caa;
+    color: white;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #046daa;
+    color: white;
+}
+
+/*CONTINGUT DE LA CAIXA*/
+.row {
+    background-color: rgba(100, 136, 237, 0.993);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    width: 33%;
+    padding: 7px;
+}
+
+p {
+    margin: 4%;
+    font-weight: bold;
+    font-size: large;
+}
+
+img[src="imatges/vilafranca5.jpg"] {
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.5);
+    transition: 3s;
+}
+
+img[src="imatges/vilafranca5.jpg"]:hover {
+    filter: brightness(60%);
+}
+
+.estructura {
+    color: white;
+    width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.estructura h3 {
+    font-size: 2vw;
+    color: rgb(240, 228, 228);
+    margin-left: 1vw;
+}
+
+.estructura ol li {
+    font-size: 1.25vw;
+}
+
+.estructura ul li {
+    font-size: 1.25vw;
+}
+
+.estructura img {
+    width: 100%;
+}
+
+/*FORMUALRI DE LA PÀGINA*/
+.total {
+    background-color: rgba(100, 136, 237, 0.993);
+    margin: auto;
+    width: 55%;
+}
+
+fieldset {
+    background: linear-gradient(rgb(14, 177, 226), rgb(235, 217, 140));
+    box-shadow: 2px 2px;
+}
+
+legend {
+    background-color: aquamarine;
+    border: 0.1vw solid black;
+    font-weight: bold;
+}
+
+.contingut {
+    width: 90%;
+}
+
+input:hover {
+    background-color: rgb(179, 179, 179);
+}
+
+#Particular {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#Empresa {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button[type="submit"] {
+    padding: 1vw;
+    flex: 1;
+    background-color: rgb(190, 253, 211);
+    border: 1px solid black;
+}
+
+button[type="reset"] {
+    padding: 1vw;
+    flex: 1;
+    background-color: rgb(243, 242, 181);
+    border: 1px solid black;
+}
+
+button:hover {
+    border: 0.25vw solid #000000;
+    border-radius: 0.3vw;
+}
+
+.enviat {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(247, 216, 150, 0.897);
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: x-large;
+    background-color: rgba(100, 136, 237, 0.993);
+}
+
+/*PEU DE LA PÀGINA*/
+footer {
+    background-color: rgb(248, 160, 59);
+    font-weight: bold;
+    text-align: center;
+}
+
+footer h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fa {
+    padding: 1vw;
+    width: 3vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
