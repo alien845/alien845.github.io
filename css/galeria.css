@@ -3,20 +3,24 @@
     flex-wrap: wrap;
 }
 
-.column {
+.colum {
     width: 50%;
     padding: 7px;    
 }
 
-.column img {
+.colum img {
     margin-top: 8px;
     vertical-align: middle;
-    width: 100%;    
+    width: 100%;  
+    cursor: pointer;
+    box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.5);
+    transition: 2s;  
 }
 
-.column img:hover {
+.colum img:hover {
     border: 5px solid #000000;
-    border-radius: 5vw;    
+    border-radius: 5vw; 
+    filter: brightness(60%);   
 }
 
 .galeria_imatges {
@@ -27,12 +31,19 @@
 }
 
 .galeria_imatges h1{
-    font-size: 2vw;
-    color: rgb(240, 228, 228);
+    font-size: 1.7vw;
+    color: rgb(0, 0, 0);
 }
 
 .galeria_imatges h2{
     font-size: 1.5vw;
-    color: white;
+    color: rgb(44, 44, 44);
 }
 
+@media only screen and (max-width: 600px) {
+    .colum {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

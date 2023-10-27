@@ -18,7 +18,7 @@ section {
 
 header {
     background-image: url("../imatges/vilafranca10.jpg");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -40,16 +40,8 @@ header h1 {
     text-shadow: 2px 2px #000000;
 }
 
-
-/*section {
-    display: flex;
-    flex-wrap: wrap;
-}*V*/
-
-
 /*MENU DE LA PÀGINA*/
 nav {
-    /* flex: 1;/*V*/
     background-color: rgba(100, 182, 237, 0.993);
     text-align: center;
     padding: 1vw;
@@ -75,7 +67,6 @@ nav li {
 nav li a {
     display: block;
     color: #000000;
-    /*padding: 5%;/*V**/
     text-decoration: none;
     border: 1px solid black;
     font-size: medium;
@@ -94,7 +85,7 @@ nav li a:hover:not(.active) {
     color: white;
 }
 
-/*CONTINGUT DE LA CAIXA*/
+/*CONTINGUT*/
 .row {
     background-color: rgba(100, 136, 237, 0.993);
     margin-left: auto;
@@ -108,21 +99,50 @@ nav li a:hover:not(.active) {
 }
 
 .column {
-    width: 33%;
+    width: 50%;
     padding: 7px;
+}
+
+.videos {
+    width: 100%;
+    padding: 7px;
+}
+
+iframe {
+    width: 100%;
+    height: 35vw;
+}
+
+.column h1 {
+    margin: 4%;
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.videos h1 {
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p {
     margin: 4%;
     font-weight: bold;
     font-size: large;
+    color: rgb(32, 32, 32);
+    font-size: large;
+
 }
 
 img[src="imatges/vilafranca5.jpg"] {
     width: 100%;
     cursor: pointer;
     box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.5);
-    transition: 3s;
+    transition: 2s;
 }
 
 img[src="imatges/vilafranca5.jpg"]:hover {
@@ -130,28 +150,86 @@ img[src="imatges/vilafranca5.jpg"]:hover {
 }
 
 .estructura {
-    color: white;
+    color: rgb(44, 44, 44);
     width: 50%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .estructura h3 {
-    font-size: 2vw;
-    color: rgb(240, 228, 228);
+    font-size: 1.7vw;
+    color: rgb(0, 0, 0);
     margin-left: 1vw;
 }
 
 .estructura ol li {
-    font-size: 1.25vw;
+    font-size: x-large;
 }
 
 .estructura ul li {
-    font-size: 1.25vw;
+    font-size: x-large;
 }
 
-.estructura img {
+/*Imlemetcio de les imatges amb movient*/
+.moviment {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.moviment ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: canvi 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.moviment li {
+    width: 100%;
+    list-style: none;
+}
+
+.moviment img {
     width: 100%;
 }
+
+@keyframes canvi {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
 
 /*FORMUALRI DE LA PÀGINA*/
 .total {
@@ -259,4 +337,94 @@ footer h3 {
 .fa-youtube {
     background: #bb0000;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*CAPÇALERA DE LA PÀGINA*/
+
+    header {
+        background-size: 100% 100%;
+        background-image: url("../imatges/vilafranca6.jpg");
+    }
+
+    header h2 {
+        font-size: large;
+    }
+
+    header h1 {
+        font-size: xx-large;
+    }
+
+    /*MENU DE LA PÀGINA*/
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        flex: 1;
+    }
+
+    nav ul {
+        width: 80%;
+        display: inline-block;
+    }
+
+    nav li a {
+        padding: 2%;
+    }
+
+    article {
+        flex: none;
+    }
+
+    /*CONTINGUT*/
+    p {
+        font-size: small;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column h1 {
+        font-size: larger;
+    }
+
+    .videos h1 {
+        font-size: larger;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .estructura {
+        width: 100%;
+    }
+
+    .estructura h3 {
+        font-size: larger;
+    }
+
+    .estructura ol li {
+        font-size: smaller;
+    }
+
+    .estructura ul li {
+        font-size: smaller;
+    }
+
+    .moviment {
+        width: 100%;
+    }
+
+    /*FORMUALRI DE LA PÀGINA*/
+    .total {
+        width: 100%;
+    }
+
+
+
 }

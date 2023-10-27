@@ -7,85 +7,92 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Contacte'ns</title>
 </head>
 
 <body>
+    <!--CAPÇALERA DE LA PÀGINA-->
     <header>
         <h2><a href="https://es.wikipedia.org/wiki/Villafranca_del_Panad%C3%A9s"> WikiVilafranca</a></h2>
         <h1>Vilafranca del Penedès</h1>
     </header>
     <section>
+        <!--MENU DE LA PÀGINA-->
         <nav>
             <ul>
                 <li><a href="index.html">Home -Vilafranca-</a> </li>
                 <li><a href="llocs.html">Llocs d'Interès</a></li>
-                <li><a href="plats.html">Menjas Tipics</a></li>
+                <li><a href="plats.html">Menjars Tipícs</a></li>
                 <li><a href="galeria.html">Visita Virtual</a></li>
                 <li><a class="active" href="contacte.html">Contacte'ns</a></li>
             </ul>
         </nav>
-        <article class="total">
-            <div class="estructura">
-                <h3><u>Formulari de Reserva</u></h3>
+        <!--FORMUALRI DE LA PÀGINA-->
+        <article class="row flex-container">
+            <div class="total">
+                <div class="estructura">
+                    <h3><u>Formulari de Reserva</u></h3>
+                </div>
+                <p>1.Identificació</p>
+                <form id="formulari" name="formulari" action="gracies.html" onsubmit="return validarForm();"
+                    method="post">
+                    <fieldset>
+                        <legend>Dades del client:</legend>
+                        <label for="nom">Nom i cognoms:</label><br>
+                        <input type="text" class="contingut" id="nom" name="nom" placeholder="Nom i cognoms"><br><br>
+                        <label for="nom">NIF:</label><br>
+                        <input type="text" class="contingut" id="doc" name="doc" placeholder="1234567A">
+                        <!-- <input type="text" id="lletra" name="lletra" placeholder="A-Z"><br><br> --><br><br>
+                        <label for="email">Correu electrònic</label><br>
+                        <input type="email" class="contingut" name="email" placeholder="Imprecindible"><br><br>
+                        <label for="pwd">Contrasenya:</label><br>
+                        <input type="password" class="contingut" id="pass" name="pass" required
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mínim 6 caràcters"><br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tipus de client:</legend>
+                        <label for="Particular">Particular</label>
+                        <input type="radio" id="Particular" name="fav_language" value="Particular">
+                        <label for="Empresa">Empresa</label>
+                        <input type="radio" id="Empresa" name="fav_language" value="Empresa">
+                    </fieldset>
+                    <p>2. Ruta</p>
+                    <fieldset>
+                        <legend>Imprescindible Ruta:</legend><br>
+                        <label for="cars">Lloc:</label><br>
+                        <select name="menu" size="3">
+                            <option value="lloc1">Basílica de Santa Maria</option>
+                            <option value="lloc2">Ball de gegants</option>
+                            <option value="lloc3">Ajuntament de Vilafranca</option>
+                            <option value="lloc4">Palau Baltà</option>
+                            <option value="lloc4">Casa Macià</option>
+                            <option value="lloc4">Monument a Milà i Fontanals</option>
+                            <option value="lloc4">Casa de la Festa Major</option>
+                        </select><br><br>
+                        <label for="cars">Menjar:</label><br>
+                        <select id="cars" name="cars">
+                            <option value="menja1">Xató de Vilafranca</option>
+                            <option value="menja2">Gall rostit del Penedès</option>
+                            <option value="menja3">Catànies de Vilafranca</option>
+                            <option value="menja4">Ànec mut del Penedès</option>
+                            <option value="menja5">Coques de Vilafranca</option>
+                            <option value="menja6">Conill amb bolets</option>
+                        </select><br><br>
+                        <input type="checkbox" id="condicions" name="condicions" value="Bike">
+                        <label for="condicions"> Accepte les condicions del Servei. </label><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend></legend>
+                        <div class="flex-container">
+                            <button type="submit">Enviar formulari</button>
+                            <button type="reset" value="Reset">Esborrar formulari</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
-            <p>1.Identificació</p>
-            <form id="formulari" name="formulari" action="gracies.html" onsubmit="return validarForm();" method="post">
-                <fieldset>
-                    <legend>Dades del client:</legend>
-                    <label for="nom">Nom i cognoms:</label><br>
-                    <input type="text" class="contingut" id="nom" name="nom" placeholder="Nom i cognoms"><br><br>
-                    <label for="nom">NIF:</label><br>
-                    <input type="text" class="contingut" id="doc" name="doc" placeholder="1234567A">
-                    <!-- <input type="text" id="lletra" name="lletra" placeholder="A-Z"><br><br> --><br><br>
-                    <label for="email">Correu electrònic</label><br>
-                    <input type="email" class="contingut" name="email" placeholder="Imprecindible"><br><br>
-                    <label for="pwd">Contrasenya:</label><br>
-                    <input type="password" class="contingut" id="pass" name="pass" required
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mínim 6 caràcters"><br><br>
-                </fieldset>
-                <fieldset>
-                    <legend>Tipus de client:</legend>
-                    <label for="Particular">Particular</label>
-                    <input type="radio" id="Particular" name="fav_language" value="Particular">
-                    <label for="Empresa">Empresa</label>
-                    <input type="radio" id="Empresa" name="fav_language" value="Empresa">
-                </fieldset>
-                <p>2. Ruta</p>
-                <fieldset>
-                    <legend>Imprescindible Ruta:</legend><br>
-                    <label for="cars">Lloc:</label><br>
-                    <select name="menu" size="3">
-                        <option value="lloc1">Basílica de Santa Maria</option>
-                        <option value="lloc2">Ball de gegants</option>
-                        <option value="lloc3">Ajuntament de Vilafranca</option>
-                        <option value="lloc4">Palau Baltà</option>
-                        <option value="lloc4">Casa Macià</option>
-                        <option value="lloc4">Monument a Milà i Fontanals</option>
-                        <option value="lloc4">Casa de la Festa Major</option>
-                    </select><br><br>
-                    <label for="cars">Menjar:</label><br>
-                    <select id="cars" name="cars">
-                        <option value="menja1">Xató de Vilafranca</option>
-                        <option value="menja2">Gall rostit del Penedès</option>
-                        <option value="menja3">Catànies de Vilafranca</option>
-                        <option value="menja4">Ànec mut del Penedès amb prunes i pinyons</option>
-                        <option value="menja5">Coques de Vilafranca</option>
-                        <option value="menja6">Conill amb bolets</option>
-                    </select><br><br>
-                    <input type="checkbox" id="condicions" name="condicions" value="Bike">
-                    <label for="condicions"> Accepte les condicions del Servei. </label><br>
-                </fieldset>
-                <fieldset>
-                    <legend></legend>
-                    <div class="flex-container">
-                        <button type="submit">Enviar formulari</button>
-                        <button type="reset" value="Reset">Esborrar formulari</button>
-                    </div>
-                </fieldset>
-            </form>
         </article>
     </section>
+    <!--PEU DE LA PÀGINA-->
     <footer>
         <h3> Creador de la pàgina web: Isaac Fabregat </h3>
         <a href="https://www.facebook.com/AjuntamentVilafrancaPenedes" class="fa fa-facebook"></a>
